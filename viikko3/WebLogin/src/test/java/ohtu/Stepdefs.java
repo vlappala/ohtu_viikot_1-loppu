@@ -10,11 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import java.util.Random;
 
 public class Stepdefs {
     //WebDriver driver = new ChromeDriver();
     WebDriver driver = new HtmlUnitDriver();
     String baseUrl = "http://localhost:4567";
+
+    Random r = new Random();
     
     @Given("login is selected")
     public void loginIsSelected() {
@@ -47,6 +50,15 @@ public class Stepdefs {
     @When("username {string} and password {string} are given")
     public void usernameAndPasswordAreGiven(String username, String password) throws Throwable {
         logInWith(username, password);
+    }   
+
+    @When("nonexistent username {string} is given")
+    public void nonExistentUsernameIsGiven(String username) throws Throwable {
+
+        while (Main.dao.findByName(username) != null) {
+            username = "SimoSisu"+r.nextInt(1000000);
+        }
+        logInWith(username, "asdf1234");
     }   
     
     @Then("system will respond {string}")
