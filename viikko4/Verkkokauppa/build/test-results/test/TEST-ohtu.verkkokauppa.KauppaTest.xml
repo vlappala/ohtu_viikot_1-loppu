@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ohtu.verkkokauppa.KauppaTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-21T15:13:32" hostname="DESKTOP-0C02C1S" time="2.011">
+  <properties/>
+  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="1.963"/>
+  <testcase name="kaksiSamaaTuotettaOstoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="0.006"/>
+  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaan" classname="ohtu.verkkokauppa.KauppaTest" time="0.009"/>
+  <testcase name="poistaKoristaToimii" classname="ohtu.verkkokauppa.KauppaTest" time="0.008"/>
+  <testcase name="viitegeneraattoriaKutsutaanJokaOstolleErikseen" classname="ohtu.verkkokauppa.KauppaTest" time="0.006"/>
+  <testcase name="kaksiEriTuotettaToisenSaldoNollaOstoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="0.005"/>
+  <testcase name="kaksiEriTuotettaOstoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="0.006"/>
+  <testcase name="aloitaAsiointiNollaaHinnan" classname="ohtu.verkkokauppa.KauppaTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
