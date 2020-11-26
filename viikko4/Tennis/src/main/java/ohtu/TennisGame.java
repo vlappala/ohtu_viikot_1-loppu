@@ -2,8 +2,8 @@ package ohtu;
 
 public class TennisGame {
     
-    private int m_score1 = 0;
-    private int m_score2 = 0;
+    private int points_player_one = 0;
+    private int points_player_two = 0;
     private String player1Name;
     private String player2Name;
 
@@ -14,9 +14,9 @@ public class TennisGame {
 
     public void wonPoint(String playerName) {
         if (playerName == "player1")
-            m_score1 += 1;
+            points_player_one += 1;
         else
-            m_score2 += 1;
+            points_player_two += 1;
     }
 
     
@@ -24,11 +24,11 @@ public class TennisGame {
     public String getScore() {
         String score = "";
         
-        if (m_score1==m_score2)
+        if (points_player_one==points_player_two)
         {
-            score = getEvenResult(m_score1);
+            score = getEvenResult(points_player_one);
         }
-        else if (m_score1>=4 || m_score2>=4)
+        else if (points_player_one>=4 || points_player_two>=4)
         {
             score = getExtendedGameResult();
         }
@@ -43,7 +43,7 @@ public class TennisGame {
 
         String score = "";
 
-        switch (m_score1)
+        switch (points_player_one)
             {
                 case 0:
                         score = "Love-All";
@@ -70,7 +70,7 @@ public class TennisGame {
 
         String score = "";
 
-        int minusResult = m_score1-m_score2;
+        int minusResult = points_player_one-points_player_two;
             if (minusResult==1) score ="Advantage player1";
             else if (minusResult ==-1) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
@@ -86,8 +86,8 @@ public class TennisGame {
 
         for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
+                if (i==1) tempScore = points_player_one;
+                else { score+="-"; tempScore = points_player_two;}
                 switch(tempScore)
                 {
                     case 0:
